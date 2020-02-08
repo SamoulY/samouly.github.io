@@ -7,9 +7,13 @@ function show(){
  var a = form.input.value; // input value
  document.write(a);
  document.write("</br>Test Down")
-
 };
-
+function getQueryString(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return unescape(r[2]); return null;
+  document.write(name);
+};
 </script>
 </head>
 
