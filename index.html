@@ -7,6 +7,7 @@ function show(){
  var a = form.input.value; // input value
  document.write(a);
  document.write("</br>Test Down")
+ document.write("<a href="https://samouly.github.io">Back to Input page.</a>")
 };
 function getQueryString(name) {
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -19,8 +20,7 @@ function getQueryString(name) {
 <body>
 <h3>PwnXss bypass Github</h3>
 <p>https://url/?box=Input+here(reflection only)</p>
-<p>Url:</p>
-<script>document.write(getQueryString("box"))</script>
+<p>Url: <script>document.write(getQueryString("box"))</script></p>
 <form name="form">
   <input type="text" id="input" name="box"  value="Input here" />
    <button  onclick="show()">Pwn</button>
