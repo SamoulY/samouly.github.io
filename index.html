@@ -1,0 +1,23 @@
+<html>
+<head>
+
+<title>PwnXss</title>
+<script type="text/javascript">
+function show(){
+ var a = form.input.value; // input value
+ document.write(a);
+};
+
+</script>
+</head>
+
+<body>
+<h3>PwnXss bypass Github</h3>
+<form name="form">
+  <input type="text" id="input" name="box"  value="Input here" />
+   <button  onclick="show()">Pwn</button>
+</form>
+
+</body>
+
+</html>
